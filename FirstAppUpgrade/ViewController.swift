@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var ucla: UIImageView!
+    @IBOutlet weak var usc: UIImageView!
+    
+    @IBOutlet weak var uscbutton: UIButton!
+    @IBOutlet weak var uclabutton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +24,18 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func hideUCLA(sender: AnyObject) {
+        ucla.hidden = true
+        usc.hidden = false
+        uscbutton.hidden = false
+        uclabutton.hidden = false
+    }
+    @IBAction func hideUSC(sender: AnyObject) {
+        usc.hidden = true
+        ucla.hidden = false
+        uscbutton.hidden = false
+        uclabutton.hidden = false
     }
 
 
